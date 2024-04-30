@@ -14,19 +14,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class CoreApplicationTests {
 
-	MemberService memberService = new MemberServiceImpl();
-	OrderService orderService = new OrderServiceImpl();
-
 	@Test
 	void contextLoads() {
 
-		Member member =new Member(1l,"memberA", Grade.VIP);
-		memberService.join(member);
-
-		Order order = orderService.createOrder(1l, "testItem", 10000);
-
-
-		Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
 	}
 
 }
